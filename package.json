@@ -1,0 +1,34 @@
+{
+  "name": "skincan_api",
+  "version": "1.0.0",
+  "description": "Login & Register API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kamalkun75/Backend-Skincan.git"
+  },
+  "author": "Kamalkun75",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kamalkun75/Backend-Skincan/issues"
+  },
+  "homepage": "https://github.com/Kamalkun75/Backend-Skincan#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-unless": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.4",
+    "mongoose-unique-validator": "^3.0.0",
+    "nodemon": "^2.0.16",
+    "sequelize": "^6.20.1"
+  }
+}
