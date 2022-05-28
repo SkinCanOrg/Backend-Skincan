@@ -1,7 +1,7 @@
 {
   "name": "skincan_api",
   "version": "1.0.0",
-  "description": "Login & Register API",
+  "description": "Register & Login API with Authentication JWT",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kamalkun75/Backend-Skincan.git"
+    "url": "git+https://github.com/SkinCanOrg/SkinCan-Backend.git"
   },
   "author": "Kamalkun75",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Kamalkun75/Backend-Skincan/issues"
+    "url": "https://github.com/SkinCanOrg/SkinCan-Backend/issues"
   },
-  "homepage": "https://github.com/Kamalkun75/Backend-Skincan#readme",
+  "homepage": "https://github.com/SkinCanOrg/SkinCan-Backend#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
