@@ -59,5 +59,5 @@ let host = process.env.HOST;
 
 // Listen for Request
 app.listen(port , host , () => {
-    console.log("Server is running on "+ host,": " + port)
+    console.log("Server is running on "+ host,": " + port)  // Input Host & Port with yours for use
 })
