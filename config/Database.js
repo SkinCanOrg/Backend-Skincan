@@ -1,3 +1,3 @@
 module.exports = {
-    db: 'mongodb://localhost/SkinCan-App'
+  db: "mongodb+srv://kamal_kun75:karisma12@skincancluster.tucjtco.mongodb.net/?retryWrites=true&w=majority",
 };

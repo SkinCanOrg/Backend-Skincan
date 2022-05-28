@@ -1,5 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const { MongoClient } = require("mongodb");
+const bodyParser = require('body-parser')
 
 require("dotenv").config();
 const db_Config = require('./config/Database');
@@ -40,13 +42,15 @@ app.use(
     })
 );
 
-app.use(json())
-
 // Inisiasi routes
 app.use("/users", require("./routes/routes"));
 
+app.use(express.json());
+app.use(bodyParser.json()) // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true }))
+
 // For Error responses
-app.use(error.errorHandler);
+app.use(errors.errorHandler);
 
 app.use(express.urlencoded({ extended: true}))
 

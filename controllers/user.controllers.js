@@ -1,8 +1,8 @@
 const bcrypt = require("bcryptjs");
-const userServices = require("../services/user.services");
+const userServices = require("../Service/user.service");
 
 /**
- * 1. To secure the password, we are using the bcryptjs, It stores the hashed password in the database.
+ * 1. Using the bcryptjs,to secure the password 
  * 2. In the SignIn API, we are checking whether the assigned and retrieved passwords are the same or not using the bcrypt.compare() method.
  * 3. In the SignIn API, we set the JWT token expiration time. Token will be expired within the defined duration.
  */
