@@ -1,7 +1,5 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const { MongoClient } = require("mongodb");
-const bodyParser = require('body-parser')
 
 require("dotenv").config();
 const db_Config = require('./config/Database');
@@ -36,8 +34,8 @@ app.use(
         path: [
             { url: "/users/register", methods: ["POST"] },
             { url: "/users/login", methods: ["POST"] },
-            { url: "/users/otpLogin", methods: ["POST"] },
-            { url: "/users/verifylogin", methods: ["POST"] },
+            // { url: "/users/otpLogin", methods: ["POST"] },
+           //  { url: "/users/verifylogin", methods: ["POST"] },
         ],
     })
 );
@@ -46,13 +44,9 @@ app.use(
 app.use("/users", require("./routes/routes"));
 
 app.use(express.json());
-app.use(bodyParser.json()) // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true }))
 
 // For Error responses
 app.use(errors.errorHandler);
-
-app.use(express.urlencoded({ extended: true}))
 
 let port = process.env.PORT;
 let host = process.env.HOST;
