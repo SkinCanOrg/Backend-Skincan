@@ -1,4 +1,4 @@
-const bcrypt = require("bcryptjs");
+const bcryptjs = require("bcryptjs");
 const userServices = require("../Service/user.service");
 
 /**
@@ -10,9 +10,9 @@ const userServices = require("../Service/user.service");
 exports.register = (req, res, next) => {
   const { password } = req.body;
 
-  const salt = bcrypt.genSaltSync(10);
+  const salt = bcryptjs.genSaltSync(10);
 
-  req.body.password = bcrypt.hashSync(password, salt);
+  req.body.password = bcryptjs.hashSync(password, salt);
 
   userServices.register(req.body, (error, results) => {
     if (error) {
@@ -44,7 +44,7 @@ exports.userProfile = (req, res, next) => {
 };
 
 
-exports.otpLogin = (req, res, next) => {
+/*exports.otpLogin = (req, res, next) => {
   userServices.createNewOTP(req.body, (error, results) => {
     if (error) {
       return next(error);
@@ -66,4 +66,4 @@ exports.verifyOTP = (req, res, next) => {
       data: results,
     });
   });
-};
+}; */ 
